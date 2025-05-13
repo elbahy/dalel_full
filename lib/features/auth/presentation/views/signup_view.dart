@@ -1,6 +1,4 @@
-import 'package:dalal_full/core/utils/app_colors.dart';
 import 'package:dalal_full/core/utils/app_strings.dart';
-import 'package:dalal_full/core/utils/app_styles.dart';
 import 'package:dalal_full/core/widgets/app_custom_button.dart';
 import 'package:dalal_full/features/auth/presentation/views/widgets/custom_two_text.dart';
 import 'package:dalal_full/features/auth/presentation/views/widgets/custom_welcome_text.dart';

@@ -1,11 +1,16 @@
 import 'package:dalal_full/core/database/cache/cache_helper.dart';
 import 'package:dalal_full/core/routes/app_routing.dart';
 import 'package:dalal_full/core/services/locate_service.dart';
+import 'package:dalal_full/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
   runApp(const DalelFull());
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   setUpLocateService();
   getIt<CacheHelper>().init();
 }
