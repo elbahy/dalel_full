@@ -2,6 +2,7 @@ import 'package:dalal_full/core/utils/app_colors.dart';
 import 'package:dalal_full/core/utils/app_strings.dart';
 import 'package:dalal_full/core/utils/app_styles.dart';
 import 'package:dalal_full/core/widgets/app_custom_button.dart';
+import 'package:dalal_full/features/auth/presentation/views/widgets/custom_two_text.dart';
 import 'package:dalal_full/features/auth/presentation/views/widgets/custom_welcome_text.dart';
 import 'package:dalal_full/features/auth/presentation/views/widgets/signup_form.dart';
 import 'package:flutter/material.dart';
@@ -26,16 +27,11 @@ class SignupView extends StatelessWidget {
                 child:
                     AppCustomButton(text: AppStrings.signUp, onPressed: () {})),
             const SliverToBoxAdapter(child: Gap(16)),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: Center(
-                child: Text.rich(
-                    style: AppStyles.poppins400Style12,
-                    TextSpan(children: [
-                      TextSpan(text: AppStrings.alreadyHaveAnAccount),
-                      TextSpan(
-                          text: AppStrings.signIn,
-                          style: TextStyle(color: AppColors.lightGrey))
-                    ])),
+                child: CustomTwoText(
+                    text1: AppStrings.alreadyHaveAnAccount,
+                    text2: AppStrings.signIn),
               ),
             )
           ],
