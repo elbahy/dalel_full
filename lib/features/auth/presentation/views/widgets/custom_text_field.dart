@@ -7,10 +7,12 @@ class CustomTextField extends StatefulWidget {
     super.key,
     required this.labelText,
     this.isPasswordField = false,
+    this.controller,
   });
 
   final String labelText;
   final bool isPasswordField;
+  final TextEditingController? controller;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -22,7 +24,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 28),
-      child: TextField(
+      child: TextFormField(
+        controller: widget.controller,
         obscureText: widget.isPasswordField && !isPasswordVisible,
         style: AppStyles.poppins400Style12
             .copyWith(fontSize: 14, color: Colors.black, height: 2),

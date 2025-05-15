@@ -6,13 +6,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
-  runApp(const DalelFull());
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   setUpLocateService();
   getIt<CacheHelper>().init();
+  runApp(const DalelFull());
 }
 
 class DalelFull extends StatelessWidget {

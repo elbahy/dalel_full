@@ -1,5 +1,4 @@
 import 'package:dalal_full/core/utils/app_strings.dart';
-import 'package:dalal_full/core/widgets/app_custom_button.dart';
 import 'package:dalal_full/features/auth/presentation/views/widgets/custom_two_text.dart';
 import 'package:dalal_full/features/auth/presentation/views/widgets/custom_welcome_text.dart';
 import 'package:dalal_full/features/auth/presentation/views/widgets/signup_form.dart';
@@ -20,10 +19,6 @@ class SignupView extends StatelessWidget {
             const SliverToBoxAdapter(child: CustomWelcomeText()),
             const SliverToBoxAdapter(child: Gap(12)),
             const SliverToBoxAdapter(child: SignupForm()),
-            const SliverToBoxAdapter(child: Gap(88)),
-            SliverToBoxAdapter(
-                child:
-                    AppCustomButton(text: AppStrings.signUp, onPressed: () {})),
             const SliverToBoxAdapter(child: Gap(16)),
             const SliverToBoxAdapter(
               child: Center(
